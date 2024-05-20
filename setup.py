@@ -2,6 +2,12 @@
 from setuptools import setup
 
 setup(
+    entry_points='''
+    [ckan.plugins]
+    danubius_theme=ckanext.danubius_theme.plugin:ExampleThemePlugin
+    ''',
+
+
     # If you are changing from the default layout of your extension, you may
     # have to change the message extractors, you can read more about babel
     # message extraction at

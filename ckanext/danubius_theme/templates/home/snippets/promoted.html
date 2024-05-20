@@ -1,0 +1,13 @@
+{% ckan_extends %}
+
+{% block home_image_caption %}
+  {{ _("Danube") }}
+{% endblock %}
+
+{# Replace the promoted image. #}
+{% block home_image_content %}
+  <a class="media-image" href="#">
+    <img src="/danubius_theme_featured_image2.jpeg" alt="Featured image"
+         width="420" height="220" />
+  </a>
+{% endblock %}
