@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     entry_points='''
     [ckan.plugins]
-    danubius_theme=ckanext.danubius_theme.plugin:ExampleThemePlugin
+    danubius_theme=ckanext.danubius_theme.plugin:DanubiusThemePlugin
     ''',
 
 

@@ -22,8 +22,8 @@ def most_popular_groups():
 
     
 
-class ExampleThemePlugin(plugins.SingletonPlugin):
-    '''An example theme plugin.
+class DanubiusThemePlugin(plugins.SingletonPlugin):
+    '''An danubius theme plugin.
 
     '''
     plugins.implements(plugins.IConfigurer)
@@ -49,7 +49,7 @@ class ExampleThemePlugin(plugins.SingletonPlugin):
         # Template helper function names should begin with the name of the
         # extension they belong to, to avoid clashing with functions from
         # other extensions.
-        return {'example_theme_most_popular_groups': most_popular_groups}
+        return {'danubius_theme_most_popular_groups': most_popular_groups}
 
 
 
