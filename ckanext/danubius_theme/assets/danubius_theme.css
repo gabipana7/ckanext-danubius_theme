@@ -28,7 +28,8 @@
 
 /* The "navigation pills" and logo masthead color */
 .masthead {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
+  background: #FFFFFF;
 }
 
 /* Navigation pills font color */
@@ -84,9 +85,9 @@
 }
 
 /* Remove the feature image */
-.homepage .module-promotion {
+/* .homepage .module-promotion {
   display: none
-}
+} */
 
 
 /* Remove the "box shadow" effect around various boxes on the page. */

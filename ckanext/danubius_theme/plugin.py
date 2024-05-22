@@ -19,6 +19,18 @@ def most_popular_groups():
     return groups
 
 
+def most_popular_orgs():
+    '''Return a sorted list of the groups with the most datasets.'''
+
+    # Get a list of all the site's groups from CKAN, sorted by number of
+    # datasets.
+    orgs = toolkit.get_action('organization_list')(
+        {}, {'sort': 'package_count desc', 'all_fields': True})
+
+    # Truncate the list to the 10 most popular groups only.
+    orgs = orgs[:3]
+
+    return orgs
 
     
 
@@ -56,20 +68,9 @@ class DanubiusThemePlugin(plugins.SingletonPlugin):
         # Template helper function names should begin with the name of the
         # extension they belong to, to avoid clashing with functions from
         # other extensions.
-        return {'danubius_theme_most_popular_groups': most_popular_groups}
+        return {'danubius_theme_most_popular_groups': most_popular_groups,
+                'danubius_theme_most_popular_organizations': most_popular_orgs}
 
 
 
 
-# def most_popular_orgs():
-#     '''Return a sorted list of the groups with the most datasets.'''
-
-#     # Get a list of all the site's groups from CKAN, sorted by number of
-#     # datasets.
-#     orgs = toolkit.get_action('organization_list')(
-#         {}, {'sort': 'package_count desc', 'all_fields': True})
-
-#     # Truncate the list to the 10 most popular groups only.
-#     orgs = orgs[:3]
-
-#     return orgs
