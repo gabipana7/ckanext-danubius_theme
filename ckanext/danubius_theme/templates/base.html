@@ -4,10 +4,13 @@
   {{ super() }}
 
   {# Import danubius_theme.css using Webassets.  'danubius_theme/' is
-    the name that the danubius_theme/fanstatic directory was registered
+    the name that the danubius_theme/webassets directory was registered
     with when the toolkit.add_resource() function was called.
     'danubius_theme' is the name to the Webassets bundle file,
     registered inside webassets.yml file. #}
-  {% asset 'danubius_theme/danubius_theme' %}
+  {% asset 'danubius_theme/danubius_theme-css' %}
 
 {% endblock %}
+
+
+

@@ -1,14 +1,18 @@
-danubius_theme-js:
-  filter: rjsmin
-  output: ckanext-danubius_theme/%(version)s-danubius_theme.js
-  contents:
-    - js/danubius_theme.js
+danubius_theme-css:
+  filter: cssrewrite
+  output: ckanext-danubius_theme/%(version)s-danubius_theme.css
+  contents: danubius_theme.css
   extra:
     preload:
       - base/main
 
-danubius_theme-css:
-  filter: cssrewrite
-  output: ckanext-danubius_theme/%(version)s-danubius_theme.css
-  contents:
-    - css/danubius_theme.css
+
+# danubius_theme-js:
+#   filter: rjsmin
+#   output: ckanext-danubius_theme/%(version)s-danubius_theme.js
+#   contents:
+#     - js/danubius_theme.js
+#   extra:
+#     preload:
+#       - base/main
+
