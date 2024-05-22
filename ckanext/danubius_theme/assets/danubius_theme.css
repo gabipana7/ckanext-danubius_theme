@@ -56,10 +56,16 @@
   box-shadow: inset 0px 0px 2px 0px rgba(220, 220, 220, 0.7);
 }
 
-
+/* Change background of navigation pills on hover*/
 .masthead .main-navbar ul li:hover a, .masthead .main-navbar ul li:focus a, .masthead .main-navbar ul li.active a {
   border-radius: 0.3rem;
   background-color: rgb(220, 220, 220);
+}
+
+/* Change nav pills collapsible menu color appearing on mobile / narrow site */
+.text-white {
+  --bs-text-opacity: 1;
+  color: rgb(40, 40, 40) !important;
 }
 
 /* ===========================================
@@ -67,6 +73,10 @@
    =========================================== */
 
 
+/* Sets a fixed height for the hero */
+.hero {
+  height: 550px; 
+}
 
 /* Overwrite boxes transparency*/
 .box, .wrapper {
@@ -88,7 +98,6 @@
 /* .homepage .module-promotion {
   display: none
 } */
-
 
 /* Remove the "box shadow" effect around various boxes on the page. */
 .box {
